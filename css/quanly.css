@@ -1,0 +1,175 @@
+body {
+  background-image: url("../img/ironman.jpg"); }
+
+.container {
+  min-height: 820px;
+  margin: 0 auto; }
+  .container .haha {
+    justify-content: right; }
+  .container .modify {
+    display: flex;
+    flex-direction: row; }
+  .container .nameuser {
+    color: white;
+    padding-top: 20px; }
+  .container .caculator {
+    min-width: 50%;
+    border: 1px solid greenyellow;
+    border-radius: 3px;
+    background-color: aliceblue;
+    padding: 5px 20px;
+    z-index: 9999; }
+    .container .caculator h4 {
+      color: blue;
+      margin: 10px 0; }
+  .container .form-group {
+    margin: 0 auto; }
+    .container .form-group .ipt {
+      box-sizing: border-box;
+      display: flex; }
+    .container .form-group label {
+      box-sizing: border-box;
+      padding-top: 10px;
+      width: 40%;
+      margin-right: 10px; }
+    .container .form-group input {
+      width: 60%;
+      margin: 2px 0; }
+    .container .form-group .mess {
+      text-align: center;
+      font-size: 13px;
+      color: red;
+      margin-left: 75px; }
+  .container .cacula_money {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between; }
+    .container .cacula_money button {
+      width: 49%; }
+  .container .table-infor {
+    margin-top: 20px;
+    padding: 0 10px;
+    background-color: #fff8ef;
+    z-index: 100000; }
+    .container .table-infor .info--more {
+      display: flex;
+      justify-content: space-between; }
+      .container .table-infor .info--more i {
+        color: green; }
+      .container .table-infor .info--more label {
+        color: black;
+        cursor: pointer; }
+      .container .table-infor .info--more .excel {
+        cursor: pointer; }
+    .container .table-infor h4 {
+      color: black;
+      margin: 5px 0; }
+    .container .table-infor th {
+      border: 1px solid navy;
+      text-align: center; }
+    .container .table-infor td:last-child {
+      text-align: center; }
+      .container .table-infor td:last-child i {
+        cursor: pointer; }
+    .container .table-infor td {
+      border: 1px solid navy;
+      text-align: center;
+      padding: 5px; }
+    .container .table-infor .chon {
+      margin-bottom: 10px; }
+      .container .table-infor .chon .hihi {
+        color: black; }
+  .container .update_infor {
+    position: absolute;
+    padding: 0;
+    max-width: 83%;
+    border: 1px solid greenyellow;
+    border-radius: 3px;
+    background-color: aliceblue;
+    padding: 5px 20px;
+    transition: 2s; }
+    .container .update_infor h4 {
+      color: blue;
+      margin: 10px 0; }
+    .container .update_infor .ipupdate {
+      display: flex; }
+      .container .update_infor .ipupdate label {
+        width: 40%; }
+      .container .update_infor .ipupdate input {
+        width: 60%; }
+    .container .update_infor .update--if {
+      display: flex;
+      justify-content: end; }
+      .container .update_infor .update--if button {
+        margin: 20px 10px 0 0; }
+  .container .ud_none {
+    display: none; }
+  .container .deleteELM {
+    position: absolute;
+    top: 220px;
+    right: 100px;
+    background-color: aliceblue;
+    border: 1px solid navy;
+    padding: 15px;
+    border-radius: 3px;
+    z-index: 9999; }
+    .container .deleteELM .dl {
+      display: flex;
+      justify-content: space-around; }
+    .container .deleteELM h5 {
+      color: blue;
+      margin: 10px; }
+  .container .list-page {
+    display: flex;
+    flex-direction: row; }
+  .container .pagination {
+    justify-content: center;
+    padding-bottom: 15px; }
+
+.invalid {
+  border: 1px solid red; }
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes fadeOut {
+  from {
+    transform: translateY(0);
+    opacity: 1; }
+  to {
+    transform: translateY(100%);
+    opacity: 0; } }
+@keyframes fadeOutC {
+  from {
+    transform: translateY(0);
+    opacity: 1; }
+  to {
+    transform: translateY(-100%);
+    opacity: 0; } }
+@keyframes fadeInC {
+  from {
+    transform: translateY(-100%);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes fadeIndel {
+  from {
+    transform: translateY(100%);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes fadeOutdel {
+  from {
+    transform: translateY(0);
+    opacity: 1; }
+  to {
+    transform: translateY(calc(100%));
+    opacity: 0; } }
+
+/*# sourceMappingURL=quanly.css.map */

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/superman.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/toast.css">
+    <title>Hệ thống quản lý thông tin người dùng</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-dark navbar-expand-sm">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse haha" id="navbar-list-4">
+                <ul class="navbar-nav">
+                    <div class="nameuser"></div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="logined" src="./img/superman.jpg" width="40" height="40" class="rounded-circle">
+                            <img id="logouted"
+                                src="https://scr.vn/wp-content/uploads/2020/07/Avatar-Facebook-tr%E1%BA%AFng.jpg"
+                                alt="avatar" width="40" height="40" class="rounded-circle">
+                        </a>
+                        <div class="dropdown-menu list-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" id="login_regis" href="register.html">Đăng nhập/Đăng kí</a>
+                            <a class="dropdown-item" id="home" href="#">Home</a>
+                            <a class="dropdown-item" id="timkiem" href="#">Tra cứu thông tin</a>
+                            <a class="dropdown-item" id="quanly" href="#">Quản lý thông tin </br> người dùng</a>
+                            <a class="dropdown-item" id="logout" href="#">Log Out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-12 heading">
+                <div class="infor">
+                    <h2 class="h2">chào mừng đến với </h2>
+                    <h1 class="h1">Hệ thống quản lý thông tin người dùng</h1>
+                </div>
+            </div>
+            <div class="col-12 col-md-2"></div>
+            <div class="col-12 col-md-6"></div>
+            <div class="col-12 col-md-2">
+                <div id="toast">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-dark" href="#">DucReal 95</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+</body>
+<script>
+</script>
+<script src="./js/index.js"></script>
+<script src="./js/mess.js"></script>
+<script src="./js/power.js"></script>
+<script>
+    if (power) {
+        document.querySelector('#login_regis').style.display = 'none';
+    }
+
+    function success() {
+        toast({
+            title: 'Success',
+            message: 'Tao tai khoan thanh cong',
+            type: 'success',
+            duration: 3000
+        })
+    }
+    function error() {
+        toast({
+            title: 'Error',
+            message: 'Vui lòng đăng nhập để sử dụng chức năng này',
+            type: 'error',
+            duration: 3000
+        })
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</html>

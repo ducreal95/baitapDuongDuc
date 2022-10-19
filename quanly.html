@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/superman.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/toast.css">
+    <link rel="stylesheet" href="./css/quanly.css">
+    <title>Hệ thống quản lý thông tin người dùng</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-dark navbar-expand-sm">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse haha" id="navbar-list-4">
+                <ul class="navbar-nav">
+                    <div class="nameuser"></div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="logined" src="./img/superman.jpg" width="40" height="40" class="rounded-circle">
+                            <img id="logouted"
+                                src="https://scr.vn/wp-content/uploads/2020/07/Avatar-Facebook-tr%E1%BA%AFng.jpg"
+                                alt="avatar" width="40" height="40" class="rounded-circle">
+                        </a>
+                        <div class="dropdown-menu list-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" id="home" href="#">Home</a>
+                            <a class="dropdown-item" id="timkiem" href="#">Tra cứu thông tin</a>
+                            <a class="dropdown-item" id="quanly" href="#">Quản lý thông tin </br> người dùng</a>
+                            <a class="dropdown-item" id="logout" href="#">Log Out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+
+            <div class="col-12 col-md-3">
+                <div id="toast">
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6 modify">
+                <div class="caculator">
+                    <h4>Caculator monthly electricity customers</h4>
+                    <form action="/" id="form-cacul" method="get">
+                        <div class="form-group">
+                            <div class="ipt">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                            <div class="mess"><span class="message"></span></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="ipt">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                            <div class="mess"><span class="message"></span></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="ipt">
+                                <label for="start">Start-up period</label>
+                                <input type="number" id="start" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                            <div class="mess"><span class="message1"></span></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="ipt">
+                                <label for="end">End-of-item </label>
+                                <input type="number" id="end" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                            <div class="mess"><span class="message2"></span></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="ipt">
+                                <label for="vat">The VAT tax</label>
+                                <input type="text" id="vat" placeholder="10%" value="10" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                            <div class="mess"><span class="message"></span></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="ipt">
+                                <input type="text" id="index_del" hidden>
+                            </div>
+                        </div>
+                        <div class="cacula_money">
+                            <button type="button" id="caculaor" class="btn btn-success">Caculate</button>
+                            <button type="reset" id="clear" class="btn btn-primary">Clear</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- form update -->
+
+                <div class="col-12 col-sm-12 update_infor ud_none ">
+                    <div class="update--form_1 ">
+                        <h4>Update bill for customers</h4>
+                        <form action="/" id="form-update">
+                            <div class="form-group">
+                                <div class="ipupdate">
+                                    <label for="name_ud">Full Name</label>
+                                    <input type="text" id="name_ud" class="form-control" aria-label="Small"
+                                        aria-describedby="inputGroup-sizing-sm">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="ipupdate">
+                                    <label for="address_ud">Address</label>
+                                    <input type="text" id="address_ud" class="form-control" aria-label="Small"
+                                        aria-describedby="inputGroup-sizing-sm">
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="ipupdate">
+                                    <label for="start_ud">Start-up period</label>
+                                    <input type="text" id="start_ud" class="form-control" aria-label="Small"
+                                        aria-describedby="inputGroup-sizing-sm">
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="ipupdate">
+                                    <label for="end_ud">End-of-item </label>
+                                    <input type="text" id="end_ud" class="form-control" aria-label="Small"
+                                        aria-describedby="inputGroup-sizing-sm">
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="ipupdate">
+                                    <label for="vat_ud">The VAT tax</label>
+                                    <input type="text" id="vat_ud" placeholder="10%" class="form-control"
+                                        aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="ipupdate">
+                                    <input type="text" id="index" hidden>
+                                </div>
+                            </div>
+                            <div class="update--if">
+                                <button type="button" id="update" class="btn btn-primary">Update</button>
+                                <button type="reset" id="cancel" class="btn btn-primary">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="deleteELM ud_none">
+                    <h5>Xác nhận muốn xóa</h5>
+                    <div class="dl">
+                        <button type="button" id="del_cancel" class="btn btn-success">Cancel</button>
+                        <button type="button" id="del_susses" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-12 col-md-3"></div> -->
+
+
+
+            <!-- table information -->
+
+            <div class="col-12 col-md-12 col-sm-12 table-infor">
+                <h4>Thông tin đã thêm</h4>
+                <div class="info--more">
+                    <div class="chon">
+                        <span class="hihi">Hiển thị</span>
+                        <select name="" id="select-listpage">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                        </select>
+                        <span class="hihi">records</span>
+                    </div>
+                    <div class="excel">
+                        <i class="fa-solid fa-print" id="excel-export"></i>
+                        <label for="excel-export"> Download xlsx</label>
+                    </div>
+                </div>
+                <table class="table table-success table-striped table_infor">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Start-up period</th>
+                            <th>End-of-item digital</th>
+                            <th>VAT</th>
+                            <th>Modify</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-infor_cacula">
+
+                    </tbody>
+                </table>
+                <div class="page">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" id="pre" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <div class="list-page">
+
+                            </div>
+                            <li class="page-item">
+                                <a class="page-link" id="next" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-dark" href="#">DucReal 95</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+<script src="./js/quanly.js"></script>
+<script src="./js/mess.js"></script>
+<script src="./js/power.js"></script>
+<script src="./js/excel.js"></script>
+<script>
+    if (!power) {
+        window.location.href = "index.html"
+    }
+    function success() {
+        toast({
+            title: 'Success',
+            message: 'Thông tin đã được cập nhật',
+            type: 'success',
+            duration: 3000
+        })
+    }
+    function deleteELM() {
+        toast({
+            title: 'Deleted',
+            message: 'Đã xóa thông tin người dùng',
+            type: 'error',
+            duration: 3000
+        })
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</html>

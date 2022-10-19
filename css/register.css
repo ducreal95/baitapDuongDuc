@@ -1,0 +1,94 @@
+body {
+  width: 100%;
+  background-image: url("../img/ironman.jpg"); }
+  body .container {
+    min-height: 820px; }
+    body .container #registe, body .container #login {
+      z-index: 9999; }
+    body .container .list_RL {
+      margin-top: 20px;
+      display: flex;
+      justify-content: right; }
+      body .container .list_RL button {
+        margin: 2px; }
+    body .container .register {
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      padding: 0; }
+      body .container .register h4 {
+        padding: 10px;
+        background-color: brown;
+        color: white; }
+      body .container .register input {
+        box-sizing: border-box;
+        margin: 10px 5px;
+        width: 98%; }
+      body .container .register .save, body .container .register .dangnhap {
+        margin-top: 5px;
+        padding: 5px 0 10px 10px; }
+      body .container .register .register__form, body .container .register .login__form {
+        position: absolute;
+        min-width: 420px;
+        box-shadow: 0 5px 6px 2px rgba(255, 255, 255, 0.2); }
+    body .container .loi {
+      margin-left: 15px; }
+      body .container .loi .message, body .container .loi .log-err {
+        font-size: 13px;
+        color: red; }
+  body .form_none {
+    display: none; }
+
+.invalid input {
+  border: 1px solid red; }
+
+#form-2 {
+  background-color: white; }
+
+#form-1 {
+  background-color: white; }
+  #form-1 .radioo {
+    margin-left: 10px;
+    display: flex; }
+    #form-1 .radioo .aa {
+      display: flex;
+      flex-direction: row; }
+      #form-1 .radioo .aa label {
+        padding: 5px 5px 5px; }
+  #form-1 input {
+    margin: 3px; }
+
+a {
+  text-decoration: none; }
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes fadeOut {
+  from {
+    transform: translateY(0);
+    opacity: 1; }
+  to {
+    transform: translateY(-100%);
+    opacity: 0; } }
+@keyframes fadeOutlogin {
+  from {
+    transform: translateY(0);
+    opacity: 1; }
+  to {
+    transform: translateY(-100%);
+    opacity: 0; } }
+@keyframes fadeInlogin {
+  from {
+    transform: translateY(calc(-100%));
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+
+/*# sourceMappingURL=register.css.map */

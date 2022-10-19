@@ -1,0 +1,274 @@
+body {
+    background-image: url('../img/ironman.jpg');
+}
+
+.container {
+    min-height: 820px;
+
+    .haha {
+        justify-content: right;
+    }
+.modify{
+    display: flex;
+    flex-direction: row;
+}
+    .nameuser {
+        color: white;
+        padding-top: 20px;
+    }
+
+    margin: 0 auto;
+
+    .caculator {
+        min-width: 50%;
+        border: 1px solid greenyellow;
+        border-radius: 3px;
+        background-color: aliceblue;
+        padding: 5px 20px;
+        z-index: 9999;
+        h4 {
+            color: blue;
+            margin: 10px 0;
+        }
+    }
+
+    .form-group {
+        margin: 0 auto;
+        
+        .ipt {
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        label {
+            box-sizing: border-box;
+            padding-top: 10px;
+            width: 40%;
+            margin-right: 10px;
+        }
+
+        input {
+            width: 60%;
+            margin: 2px 0;
+        }
+
+        .mess {
+            text-align: center;
+            font-size: 13px;
+            color: red;
+            margin-left: 75px;
+        }
+    }
+
+    .cacula_money {
+        margin: 20px 0;
+
+        button {
+            width: 49%;
+        }
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .table-infor {
+        margin-top: 20px;
+        padding: 0 10px;
+        background-color: rgb(255, 248, 239);
+        z-index: 100000;
+        .info--more {
+            display: flex;
+            justify-content: space-between;
+
+            i {
+                color: green;
+            }
+
+            label {
+                color: black;
+                cursor: pointer;
+            }
+
+            .excel {
+                cursor: pointer;
+            }
+        }
+
+        h4 {
+            color: black;
+            margin: 5px 0;
+        }
+
+        th {
+            border: 1px solid navy;
+            text-align: center;
+        }
+
+        td:last-child {
+            text-align: center;
+
+            i {
+                cursor: pointer;
+            }
+        }
+
+        td {
+            border: 1px solid navy;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .chon {
+            margin-bottom: 10px;
+
+            .hihi {
+                color: black;
+            }
+        }
+    }
+
+    .update_infor {
+        position: absolute;
+        padding: 0;
+        max-width: 83%;
+        border: 1px solid greenyellow;
+        border-radius: 3px;
+        background-color: aliceblue;
+        padding: 5px 20px;
+        transition: 2s;
+        h4 {
+            color: blue;
+            margin: 10px 0;
+        }
+
+        
+            
+            .ipupdate {
+                display: flex;
+
+                label {
+                    width: 40%;
+                }
+
+                input {
+                    width: 60%;
+                }
+            }
+
+            .update--if {
+                display: flex;
+                justify-content: end;
+
+                button {
+                    margin: 20px 10px 0 0;
+                }
+            }
+        
+    }
+
+    .ud_none {
+        display: none;
+    }
+
+    .deleteELM {
+        position: absolute;
+        top: 220px;
+        right: 100px;
+        background-color: aliceblue;
+        border: 1px solid navy;
+        padding: 15px;
+        border-radius: 3px;
+        z-index: 9999;
+        .dl {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        h5 {
+            color: blue;
+            margin: 10px;
+        }
+
+
+    }
+
+    .list-page {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .pagination {
+        justify-content: center;
+        padding-bottom: 15px;
+    }
+}
+
+.invalid {
+    border: 1px solid red;
+}
+
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+@keyframes fadeOutC {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+@keyframes fadeInC {
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeIndel {
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeOutdel {
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(calc(100%));
+        opacity: 0;
+    }
+}
+

@@ -1,0 +1,73 @@
+body {
+  background-image: url("../img/ironman.jpg"); }
+
+.container {
+  min-height: 820px;
+  margin: 0 auto; }
+  .container .haha {
+    justify-content: right; }
+  .container .heading--1 {
+    margin-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 1px 4px 3px black; }
+  .container .search_info {
+    display: flex;
+    margin-top: 50px; }
+    .container .search_info input {
+      margin-right: 10px; }
+  .container .nameuser {
+    color: white;
+    padding-top: 20px; }
+  .container .message--1 {
+    background-color: white;
+    color: black; }
+  .container .table_info_money {
+    margin-top: 30px;
+    background-color: white; }
+    .container .table_info_money .heading-infor {
+      font-weight: bold;
+      margin-top: 20px;
+      color: red;
+      text-transform: uppercase; }
+    .container .table_info_money .name-user {
+      display: flex;
+      flex-direction: column; }
+    .container .table_info_money .nhacc, .container .table_info_money .if_user {
+      display: flex; }
+    .container .table_info_money .user_info, .container .table_info_money .name_usser {
+      display: flex;
+      flex-direction: column; }
+    .container .table_info_money .infor_user-1 {
+      margin: 2px;
+      font-size: 13px; }
+    .container .table_info_money .tien_dien th {
+      text-transform: uppercase;
+      font-size: 14px;
+      text-align: center;
+      padding: 2px;
+      border: 1px solid navy; }
+    .container .table_info_money .tien_dien tr:first-child td {
+      text-align: center; }
+    .container .table_info_money .tien_dien td {
+      border: 1px solid navy;
+      font-size: 13px;
+      padding: 4px; }
+      .container .table_info_money .tien_dien td p {
+        text-align: right; }
+  .container .timkiemten {
+    color: yellow;
+    margin-top: 20px; }
+
+.red {
+  margin-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 4px 3px white;
+  color: red; }
+
+.invalid {
+  border: 1px solid red; }
+
+/*# sourceMappingURL=tracuu.css.map */

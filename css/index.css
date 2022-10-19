@@ -1,0 +1,32 @@
+body {
+  width: 100%;
+  background-image: url("../img/ironman.jpg"); }
+  body .container {
+    min-height: 820px; }
+    body .container .haha {
+      justify-content: right; }
+  body .infor .h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    margin: 0; }
+  body .infor .h1 {
+    color: #ff1d1d;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0; }
+  body .nameuser {
+    color: white;
+    padding-top: 20px; }
+
+.h2-1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ff1d1d; }
+
+.h1-1 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center; }
+
+/*# sourceMappingURL=index.css.map */
